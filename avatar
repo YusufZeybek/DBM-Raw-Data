@@ -1,0 +1,135 @@
+{
+  "name": "avatar",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UwMdv",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "kullanici",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "12",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "kullanici1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "12",
+      "storage": "1",
+      "varName2": "avatar1",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "${tempVars(\"kullanici\")}",
+      "author": "",
+      "color": "#7a0002",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "${tempVars(\"avatar\")}",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© 2020 RUPSSY | Geliştirici RupS#2402 | Prefix ${server.tag}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "${tempVars(\"kullanici1\")}",
+      "author": "",
+      "color": "#7a0002",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "${tempVars(\"avatar1\")}",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "© 2020 RUPSSY | Geliştirici RupS#2402 | Prefix ${server.tag}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
