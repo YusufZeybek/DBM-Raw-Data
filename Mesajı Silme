@@ -1,0 +1,125 @@
+{
+  "name": "Mesaj Silme",
+  "temp": "msg",
+  "event-type": "18",
+  "_id": "ElNru",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "logkanal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "logkanalid",
+      "name": "Store Server Data"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"logkanalid\")}",
+      "storage": "1",
+      "varName": "logkanal",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "type": "72",
+      "before": "",
+      "after": "",
+      "limit": "1",
+      "storage2": "1",
+      "varName2": "log list",
+      "name": "Store Audit Log List MOD"
+    },
+    {
+      "list": "7",
+      "varName": "log list",
+      "getType": "0",
+      "position": "",
+      "storage": "1",
+      "varName2": "audit log",
+      "name": "Get Item from List"
+    },
+    {
+      "storage": "1",
+      "varName": "audit log",
+      "info": "2",
+      "position": "",
+      "storage2": "1",
+      "varName2": "exec",
+      "name": "Store Audit Log Info MOD"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "18",
+      "storage": "1",
+      "varName2": "uye",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "RUPSSY LOG",
+      "author": "",
+      "color": "#7a0002",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://www.ceptakip.org/wp-content/uploads/2017/12/ayarlar.png",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Üye",
+      "message": "${tempVars(\"uye\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Mesaj",
+      "message": "${tempVars(\"msg\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Eylem",
+      "message": "Mesajın Silinmesi",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© 2020 RUPSSY | Geliştirici RupS#2402 | Prefix ${server.tag}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "logkanal",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
