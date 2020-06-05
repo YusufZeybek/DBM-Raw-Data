@@ -1,0 +1,76 @@
+{
+  "name": "Sayaç Giriş",
+  "temp": "member",
+  "event-type": "6",
+  "_id": "DMZsv",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "sayac-kanal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "sayackanalid",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "sayac-number",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "sayackisi",
+      "name": "Store Server Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "7",
+      "storage": "1",
+      "varName2": "kullanici",
+      "name": "Store Member Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "36",
+      "storage": "1",
+      "varName2": "membercount",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "1",
+      "varName": "sayackanalid",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "FirstNumber": "${tempVars(\"sayackisi\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"membercount\")}",
+      "storage": "1",
+      "varName": "kalankisi",
+      "name": "Basic Math Operation"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"sayackanalid\")}",
+      "storage": "1",
+      "varName": "ch",
+      "name": "Find Channel"
+    },
+    {
+      "channel": "5",
+      "varName": "ch",
+      "message": ":inbox_tray: ``${tempVars(\"kullanici\")}`` adlı kullanıcı sunucuya katıldı. ``${tempVars(\"sayackisi\")}`` kişi olmamıza son ``${tempVars(\"kalankisi\")}`` kişi kaldı!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
