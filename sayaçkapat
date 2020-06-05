@@ -1,0 +1,39 @@
+{
+  "name": "sayaçkapat",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "kXTdG",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "sayac-kanal",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "sayac-number",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<:basarili:703710903778017331> Sayaç başarıyla kapatıldı.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "_aliases": [
+    "sayackapat",
+    "sayaç-kapat",
+    "sayac-kapat"
+  ]
+}
