@@ -1,0 +1,64 @@
+{
+  "name": "Bot DM",
+  "temp": "dm-msg",
+  "event-type": "2",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "tempVars(\"dm-msg\").member == null ? tempVars(\"dm-msg\").channel.recipient.username : \"\"",
+      "storage": "1",
+      "varName": "username",
+      "name": "Run Script"
+    },
+    {
+      "storage": "1",
+      "varName": "username",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "tempVars(\"dm-msg\").content",
+      "storage": "1",
+      "varName": "msg-content",
+      "name": "Run Script"
+    },
+    {
+      "info": "0",
+      "find": "705555969651769414",
+      "storage": "1",
+      "varName": "server",
+      "name": "Find Server"
+    },
+    {
+      "server": "1",
+      "varName": "server",
+      "name": "Change Server"
+    },
+    {
+      "info": "0",
+      "find": "713396953979027466",
+      "storage": "1",
+      "varName": "logchannel",
+      "name": "Find Channel"
+    },
+    {
+      "channel": "5",
+      "varName": "logchannel",
+      "message": "**${tempVars(\"username\")}**: ${tempVars(\"msg-content\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "YOuzm"
+}
