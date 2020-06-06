@@ -1,0 +1,158 @@
+{
+  "name": "ip",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "WwRDN",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "csgoip",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ip",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "csgoip",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<:basarisiz:703710927144485004> Bir IP adresi kayıt edilmemiş. `${server.tag}csgoip`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "0",
+      "storage": "1",
+      "varName": "servername",
+      "name": "Store Game Server Info"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "1",
+      "storage": "1",
+      "varName": "map",
+      "name": "Store Game Server Info"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "2",
+      "storage": "1",
+      "varName": "aktif",
+      "name": "Store Game Server Info"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "4",
+      "storage": "1",
+      "varName": "max",
+      "name": "Store Game Server Info"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "4",
+      "storage": "1",
+      "varName": "max",
+      "name": "Store Game Server Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"servername\")}",
+      "color": "#83ff89",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Sunucu bilgileri aşağıdadır.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "IP",
+      "message": "${tempVars(\"ip\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Oyuncu",
+      "message": "${tempVars(\"aktif\")}/${tempVars(\"max\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Map",
+      "message": "${tempVars(\"map\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© 2020 RUPSSY | Geliştirici RupS#2402 | Prefix ${server.tag}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
