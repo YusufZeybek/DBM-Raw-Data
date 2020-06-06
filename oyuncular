@@ -1,0 +1,118 @@
+{
+  "name": "oyuncular",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "VPFjU",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "csgoip",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ip",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "csgoip",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<:basarisiz:703710927144485004> Bir IP adresi kayıt edilmemiş. `${server.tag}csgoip`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "7",
+      "storage": "1",
+      "varName": "playerlist",
+      "name": "Store Game Server Info"
+    },
+    {
+      "serverip": "${tempVars(\"ip\")}",
+      "serverport": "",
+      "game": "csgo",
+      "info": "0",
+      "storage": "1",
+      "varName": "servername",
+      "name": "Store Game Server Info"
+    },
+    {
+      "list": "7",
+      "varName": "playerlist",
+      "start": "➠ ",
+      "middle": "",
+      "end": "\\n",
+      "storage": "1",
+      "varName2": "ss",
+      "sort": "1",
+      "name": "Convert List to Text"
+    },
+    {
+      "title": "${tempVars(\"servername\")}",
+      "author": "",
+      "color": "#83ff89",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Oyuncu listesi aşağıdadır.\n\n${tempVars(\"ss\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© 2020 RUPSSY | Geliştirici RupS#2402 | Prefix ${server.tag}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
