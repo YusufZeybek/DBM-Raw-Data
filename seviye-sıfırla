@@ -1,0 +1,267 @@
+{
+  "name": "seviye-sıfırla",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "eHsKm",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "seviyesistemi",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "logkanal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "logkanalid",
+      "name": "Store Server Data"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"logkanalid\")}",
+      "storage": "1",
+      "varName": "logkanal",
+      "name": "Find Channel"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "serverid",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "member",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "member1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "lvl-${tempVars(\"serverid\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "lvl-${tempVars(\"serverid\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl1",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp-${tempVars(\"serverid\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "xp-${tempVars(\"serverid\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp1",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gerekenxp-${tempVars(\"serverid\")}",
+      "defaultVal": "50",
+      "storage": "1",
+      "varName2": "gerekenxp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "gerekenxp-${tempVars(\"serverid\")}",
+      "defaultVal": "50",
+      "storage": "1",
+      "varName2": "gerekenxp1",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<:basarisiz:727839882592124969> Bu komutu kullanmak için `Yönetici` yetkinizin bulunması gerekiyor.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<:basarisiz:727839882592124969> Lütfen seviyesini sıfırlamak istediğiniz kullanıcıyı **etiketleyin.**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "lvl-${tempVars(\"serverid\")}",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "xp-${tempVars(\"serverid\")}",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "gerekenxp-${tempVars(\"serverid\")}",
+      "changeType": "0",
+      "value": "50",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"member\")}** adlı yetkili **${tempVars(\"member1\")}** adlı oyuncunun seviyesini sıfırladı.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "title": "RUPSSY LOG",
+      "author": "",
+      "color": "#738bd7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://www.ceptakip.org/wp-content/uploads/2017/12/ayarlar.png",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Yetkili",
+      "message": "${tempVars(\"member\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Kullanıcı",
+      "message": "${tempVars(\"member1\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Eylem",
+      "message": "Seviye Sıfırlama",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© 2020 RUPSSY | Geliştirici RupS#2402 | Prefix ${server.tag}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "logkanal",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "seviye-sifirla"
+  ]
+}
