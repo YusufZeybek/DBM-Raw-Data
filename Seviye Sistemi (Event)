@@ -1,0 +1,142 @@
+{
+  "name": "Seviye Sistemi",
+  "temp": "msg",
+  "event-type": "2",
+  "_id": "OIrxP",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "random",
+      "min": "1",
+      "max": "3",
+      "name": "Generate Random Number"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "serverid",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "seviyesistemi",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "4",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "xp-${tempVars(\"serverid\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "gerekenxp-${tempVars(\"serverid\")}",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "gerekenxp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "lvl-${tempVars(\"serverid\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "lvl",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "xp-${tempVars(\"serverid\")}",
+      "changeType": "1",
+      "value": "tempVars(\"random\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "xp",
+      "comparison": "4",
+      "value": "tempVars(\"gerekenxp\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "lvl-${tempVars(\"serverid\")}",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "xp-${tempVars(\"serverid\")}",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "dataName": "gerekenxp-${tempVars(\"serverid\")}",
+      "changeType": "1",
+      "value": "50",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"lvl\")}",
+      "info": "0",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "lvl1",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "5",
+      "varName": "channel",
+      "message": "Tebrikler ${tempVars(\"member\")},\nYazı kanallarında mesajlaşarak **${tempVars(\"lvl1\")}** seviye oldun.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
